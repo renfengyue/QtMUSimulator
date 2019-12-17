@@ -1,0 +1,2133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1024</width>
+    <height>612</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MU Simulator</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>sine-wave.png</normaloff>sine-wave.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1024</width>
+      <height>491</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>8</number>
+    </property>
+    <property name="elideMode">
+     <enum>Qt::ElideNone</enum>
+    </property>
+    <widget class="QWidget" name="tpGeneral">
+     <attribute name="title">
+      <string>General</string>
+     </attribute>
+     <widget class="QLabel" name="lblMUCount">
+      <property name="geometry">
+       <rect>
+        <x>41</x>
+        <y>70</y>
+        <width>68</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Amount of MU configured.&lt;br/&gt;e.g. 3 stands for MU1 MU2 MU3 are enabled.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="text">
+       <string>MU Count</string>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="spinMUCount">
+      <property name="geometry">
+       <rect>
+        <x>241</x>
+        <y>61</y>
+        <width>48</width>
+        <height>27</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lblFreq">
+      <property name="geometry">
+       <rect>
+        <x>41</x>
+        <y>100</y>
+        <width>72</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;System frequency&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="text">
+       <string>Frequency</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="cmbFreq">
+      <property name="geometry">
+       <rect>
+        <x>241</x>
+        <y>94</y>
+        <width>63</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="maxCount">
+       <number>2</number>
+      </property>
+      <item>
+       <property name="text">
+        <string>50Hz</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>60Hz</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="lblChnCount">
+      <property name="geometry">
+       <rect>
+        <x>41</x>
+        <y>130</y>
+        <width>100</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Amount  of channels configured for each MU enabled.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="whatsThis">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="text">
+       <string>Channel Count</string>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="spinCnlCount">
+      <property name="geometry">
+       <rect>
+        <x>241</x>
+        <y>127</y>
+        <width>48</width>
+        <height>27</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lblAsdu">
+      <property name="geometry">
+       <rect>
+        <x>41</x>
+        <y>170</y>
+        <width>76</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Data protocol obeied. IEC61850-9-2 or IEC61869&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="text">
+       <string>ASDU Type</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="cmbAsdu">
+      <property name="geometry">
+       <rect>
+        <x>241</x>
+        <y>160</y>
+        <width>93</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>61850-9-2</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>61869</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="lblSimuType">
+      <property name="geometry">
+       <rect>
+        <x>41</x>
+        <y>200</y>
+        <width>109</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Test mode in order to test lost frame. Detail can be refer to manual&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="text">
+       <string>Simulation Type</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="cmbSimuType">
+      <property name="geometry">
+       <rect>
+        <x>241</x>
+        <y>193</y>
+        <width>289</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>Normal</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Lost frame every cycle</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Sample count is messed</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Multiple MUs are not synchronized</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Lost frame happened in interval cycles</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="lblOffset">
+      <property name="geometry">
+       <rect>
+        <x>41</x>
+        <y>230</y>
+        <width>182</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Frame offset&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="text">
+       <string>Sample Offset among MUs</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="edtOffset">
+      <property name="geometry">
+       <rect>
+        <x>241</x>
+        <y>226</y>
+        <width>146</width>
+        <height>27</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="chklost_1">
+      <property name="geometry">
+       <rect>
+        <x>241</x>
+        <y>261</y>
+        <width>62</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>MU1</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="chklost_2">
+      <property name="geometry">
+       <rect>
+        <x>309</x>
+        <y>261</y>
+        <width>62</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>MU2</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="chklost_3">
+      <property name="geometry">
+       <rect>
+        <x>377</x>
+        <y>261</y>
+        <width>62</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>MU3</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="chklost_4">
+      <property name="geometry">
+       <rect>
+        <x>445</x>
+        <y>261</y>
+        <width>62</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>MU4</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="chklost_5">
+      <property name="geometry">
+       <rect>
+        <x>241</x>
+        <y>301</y>
+        <width>62</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="text">
+       <string>MU5</string>
+      </property>
+      <property name="toolTipDuration" stdset="0">
+       <number>-1</number>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="chklost_6">
+      <property name="geometry">
+       <rect>
+        <x>309</x>
+        <y>301</y>
+        <width>62</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>MU6</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="chklost_7">
+      <property name="geometry">
+       <rect>
+        <x>377</x>
+        <y>301</y>
+        <width>62</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>MU7</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="chklost_8">
+      <property name="geometry">
+       <rect>
+        <x>445</x>
+        <y>301</y>
+        <width>62</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>MU8</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lblLost">
+      <property name="geometry">
+       <rect>
+        <x>41</x>
+        <y>260</y>
+        <width>125</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enable/disable lost frame feature for any MU.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="text">
+       <string>Enable Lost Frame</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="edtLostSmps">
+      <property name="geometry">
+       <rect>
+        <x>241</x>
+        <y>340</y>
+        <width>421</width>
+        <height>27</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lblLostsmps">
+      <property name="geometry">
+       <rect>
+        <x>41</x>
+        <y>340</y>
+        <width>161</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Index of lost frames in one cycle for each MU enabled.&lt;br/&gt;e.g. 23:24:25:60:67:68&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="text">
+       <string>Lost Samples</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="cmbNetwork">
+      <property name="geometry">
+       <rect>
+        <x>241</x>
+        <y>380</y>
+        <width>281</width>
+        <height>27</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lblNetwork">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>380</y>
+        <width>67</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ethernet port selected to output data frames.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="text">
+       <string>NetWork</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tpMU_1">
+     <attribute name="title">
+      <string>MU1</string>
+     </attribute>
+     <widget class="QTableWidget" name="tbMU_1">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>256</width>
+        <height>441</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lblSvId_1">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>30</y>
+        <width>36</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>SV ID</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="edtSvId_1">
+      <property name="geometry">
+       <rect>
+        <x>431</x>
+        <y>22</y>
+        <width>260</width>
+        <height>27</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lblQuality_1">
+      <property name="geometry">
+       <rect>
+        <x>301</x>
+        <y>143</y>
+        <width>78</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>MU Quality</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="chkqQues_1">
+      <property name="geometry">
+       <rect>
+        <x>577</x>
+        <y>140</y>
+        <width>121</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Questionable</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="chkqInvalid_1">
+      <property name="geometry">
+       <rect>
+        <x>431</x>
+        <y>140</y>
+        <width>75</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Invalid</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="chkqTest_1">
+      <property name="geometry">
+       <rect>
+        <x>512</x>
+        <y>140</y>
+        <width>59</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Test</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lblCTr_1">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>190</y>
+        <width>58</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>CT Ratio</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lblVTr_1">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>240</y>
+        <width>59</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>VT Ratio</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="edtCTr_1">
+      <property name="geometry">
+       <rect>
+        <x>431</x>
+        <y>190</y>
+        <width>146</width>
+        <height>27</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="edtVTr_1">
+      <property name="geometry">
+       <rect>
+        <x>431</x>
+        <y>240</y>
+        <width>146</width>
+        <height>27</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lblSyncMode_1">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>90</y>
+        <width>74</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Sync mode</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="cmbSyncMode_1">
+      <property name="geometry">
+       <rect>
+        <x>431</x>
+        <y>82</y>
+        <width>107</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>No Sync</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Local Sync</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Global Sync</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="lblSimu_1">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>300</y>
+        <width>101</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Simulation Bit</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="chk_Simu_1">
+      <property name="geometry">
+       <rect>
+        <x>431</x>
+        <y>300</y>
+        <width>97</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Simulated</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tpMU_2">
+     <attribute name="title">
+      <string>MU2</string>
+     </attribute>
+     <widget class="QTableWidget" name="tbMU_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>256</width>
+        <height>441</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lblSvId_2">
+      <property name="geometry">
+       <rect>
+        <x>301</x>
+        <y>30</y>
+        <width>36</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>SV ID</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="edtSvId_2">
+      <property name="geometry">
+       <rect>
+        <x>431</x>
+        <y>22</y>
+        <width>260</width>
+        <height>27</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lblQuality_2">
+      <property name="geometry">
+       <rect>
+        <x>301</x>
+        <y>143</y>
+        <width>78</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>MU Quality</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="chkqQues_2">
+      <property name="geometry">
+       <rect>
+        <x>577</x>
+        <y>140</y>
+        <width>121</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Questionable</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="chkqInvalid_2">
+      <property name="geometry">
+       <rect>
+        <x>431</x>
+        <y>140</y>
+        <width>75</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Invalid</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="chkqTest_2">
+      <property name="geometry">
+       <rect>
+        <x>512</x>
+        <y>140</y>
+        <width>59</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Test</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="edtCTr_2">
+      <property name="geometry">
+       <rect>
+        <x>431</x>
+        <y>190</y>
+        <width>146</width>
+        <height>27</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lblCTr_2">
+      <property name="geometry">
+       <rect>
+        <x>301</x>
+        <y>190</y>
+        <width>58</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>CT Ratio</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="edtVTr_2">
+      <property name="geometry">
+       <rect>
+        <x>431</x>
+        <y>240</y>
+        <width>146</width>
+        <height>27</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lblVTr_2">
+      <property name="geometry">
+       <rect>
+        <x>301</x>
+        <y>240</y>
+        <width>59</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>VT Ratio</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lblSyncMode_2">
+      <property name="geometry">
+       <rect>
+        <x>301</x>
+        <y>90</y>
+        <width>74</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Sync mode</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="cmbSyncMode_2">
+      <property name="geometry">
+       <rect>
+        <x>431</x>
+        <y>82</y>
+        <width>107</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>No Sync</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Local Sync</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Global Sync</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QCheckBox" name="chk_Simu_2">
+      <property name="geometry">
+       <rect>
+        <x>431</x>
+        <y>300</y>
+        <width>101</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Simulated</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lblSimu_2">
+      <property name="geometry">
+       <rect>
+        <x>301</x>
+        <y>300</y>
+        <width>94</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Simulation Bit</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tpMU_3">
+     <attribute name="title">
+      <string>MU3</string>
+     </attribute>
+     <widget class="QTableWidget" name="tbMU_3">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>256</width>
+        <height>441</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="edtSvId_3">
+      <property name="geometry">
+       <rect>
+        <x>431</x>
+        <y>22</y>
+        <width>260</width>
+        <height>27</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="chkqQues_3">
+      <property name="geometry">
+       <rect>
+        <x>577</x>
+        <y>140</y>
+        <width>121</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Questionable</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="chkqInvalid_3">
+      <property name="geometry">
+       <rect>
+        <x>431</x>
+        <y>140</y>
+        <width>75</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Invalid</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="chkqTest_3">
+      <property name="geometry">
+       <rect>
+        <x>512</x>
+        <y>140</y>
+        <width>59</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Test</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="edtCTr_3">
+      <property name="geometry">
+       <rect>
+        <x>431</x>
+        <y>190</y>
+        <width>146</width>
+        <height>27</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="edtVTr_3">
+      <property name="geometry">
+       <rect>
+        <x>431</x>
+        <y>240</y>
+        <width>146</width>
+        <height>27</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="cmbSyncMode_3">
+      <property name="geometry">
+       <rect>
+        <x>431</x>
+        <y>82</y>
+        <width>107</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>No Sync</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Local Sync</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Global Sync</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="lblVTr_3">
+      <property name="geometry">
+       <rect>
+        <x>301</x>
+        <y>240</y>
+        <width>59</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>VT Ratio</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lblQuality_3">
+      <property name="geometry">
+       <rect>
+        <x>301</x>
+        <y>143</y>
+        <width>78</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>MU Quality</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lblSyncMode_3">
+      <property name="geometry">
+       <rect>
+        <x>301</x>
+        <y>90</y>
+        <width>74</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Sync mode</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lblSvId_3">
+      <property name="geometry">
+       <rect>
+        <x>301</x>
+        <y>30</y>
+        <width>36</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>SV ID</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lblCTr_3">
+      <property name="geometry">
+       <rect>
+        <x>301</x>
+        <y>190</y>
+        <width>58</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>CT Ratio</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lblSimu_3">
+      <property name="geometry">
+       <rect>
+        <x>301</x>
+        <y>300</y>
+        <width>94</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Simulation Bit</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="chk_Simu_3">
+      <property name="geometry">
+       <rect>
+        <x>431</x>
+        <y>300</y>
+        <width>101</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Simulated</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tpMU_4">
+     <attribute name="title">
+      <string>MU4</string>
+     </attribute>
+     <widget class="QTableWidget" name="tbMU_4">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>256</width>
+        <height>441</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="edtSvId_4">
+      <property name="geometry">
+       <rect>
+        <x>431</x>
+        <y>22</y>
+        <width>260</width>
+        <height>27</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="chkqQues_4">
+      <property name="geometry">
+       <rect>
+        <x>577</x>
+        <y>140</y>
+        <width>131</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Questionable</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="chkqInvalid_4">
+      <property name="geometry">
+       <rect>
+        <x>431</x>
+        <y>140</y>
+        <width>75</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Invalid</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="chkqTest_4">
+      <property name="geometry">
+       <rect>
+        <x>512</x>
+        <y>140</y>
+        <width>59</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Test</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="edtCTr_4">
+      <property name="geometry">
+       <rect>
+        <x>430</x>
+        <y>190</y>
+        <width>146</width>
+        <height>27</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="edtVTr_4">
+      <property name="geometry">
+       <rect>
+        <x>431</x>
+        <y>240</y>
+        <width>146</width>
+        <height>27</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="cmbSyncMode_4">
+      <property name="geometry">
+       <rect>
+        <x>431</x>
+        <y>82</y>
+        <width>107</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>No Sync</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Local Sync</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Global Sync</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="lblQuality_4">
+      <property name="geometry">
+       <rect>
+        <x>301</x>
+        <y>143</y>
+        <width>78</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>MU Quality</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lblVTr_4">
+      <property name="geometry">
+       <rect>
+        <x>301</x>
+        <y>240</y>
+        <width>59</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>VT Ratio</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lblSvId_4">
+      <property name="geometry">
+       <rect>
+        <x>301</x>
+        <y>30</y>
+        <width>36</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>SV ID</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lblCTr_4">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>190</y>
+        <width>59</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>CT Ratio</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lblSyncMode_4">
+      <property name="geometry">
+       <rect>
+        <x>301</x>
+        <y>90</y>
+        <width>74</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Sync mode</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lblSimu_4">
+      <property name="geometry">
+       <rect>
+        <x>301</x>
+        <y>300</y>
+        <width>94</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Simulation Bit</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="chk_Simu_4">
+      <property name="geometry">
+       <rect>
+        <x>431</x>
+        <y>300</y>
+        <width>101</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Simulated</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tpMU_5">
+     <attribute name="title">
+      <string>MU5</string>
+     </attribute>
+     <widget class="QTableWidget" name="tbMU_5">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>256</width>
+        <height>441</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="edtSvId_5">
+      <property name="geometry">
+       <rect>
+        <x>431</x>
+        <y>20</y>
+        <width>261</width>
+        <height>27</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="chkqQues_5">
+      <property name="geometry">
+       <rect>
+        <x>580</x>
+        <y>140</y>
+        <width>131</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Questionable</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="chkqInvalid_5">
+      <property name="geometry">
+       <rect>
+        <x>431</x>
+        <y>140</y>
+        <width>75</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Invalid</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="chkqTest_5">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>140</y>
+        <width>97</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Test</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="edtCTr_5">
+      <property name="geometry">
+       <rect>
+        <x>431</x>
+        <y>190</y>
+        <width>146</width>
+        <height>27</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="edtVTr_5">
+      <property name="geometry">
+       <rect>
+        <x>431</x>
+        <y>240</y>
+        <width>146</width>
+        <height>27</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="cmbSyncMode_5">
+      <property name="geometry">
+       <rect>
+        <x>431</x>
+        <y>80</y>
+        <width>107</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>No Sync</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Local Sync</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Global Sync</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="lblQuality_5">
+      <property name="geometry">
+       <rect>
+        <x>303</x>
+        <y>140</y>
+        <width>78</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>MU Quality</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lblCTr_5">
+      <property name="geometry">
+       <rect>
+        <x>303</x>
+        <y>190</y>
+        <width>58</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>CT Ratio</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lblSyncMode_5">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>90</y>
+        <width>74</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Sync mode</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lblVTr_5">
+      <property name="geometry">
+       <rect>
+        <x>303</x>
+        <y>240</y>
+        <width>59</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>VT Ratio</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lblSvId_5">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>30</y>
+        <width>36</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>SV ID</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lblSimu_5">
+      <property name="geometry">
+       <rect>
+        <x>301</x>
+        <y>300</y>
+        <width>94</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Simulation Bit</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="chk_Simu_5">
+      <property name="geometry">
+       <rect>
+        <x>431</x>
+        <y>300</y>
+        <width>101</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Simulated</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tpMU_6">
+     <attribute name="title">
+      <string>MU6</string>
+     </attribute>
+     <widget class="QTableWidget" name="tbMU_6">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>256</width>
+        <height>441</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="edtSvId_6">
+      <property name="geometry">
+       <rect>
+        <x>430</x>
+        <y>20</y>
+        <width>251</width>
+        <height>27</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="chkqQues_6">
+      <property name="geometry">
+       <rect>
+        <x>580</x>
+        <y>140</y>
+        <width>131</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Questionable</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="chkqInvalid_6">
+      <property name="geometry">
+       <rect>
+        <x>431</x>
+        <y>140</y>
+        <width>75</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Invalid</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="chkqTest_6">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>140</y>
+        <width>97</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Test</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="edtCTr_6">
+      <property name="geometry">
+       <rect>
+        <x>431</x>
+        <y>190</y>
+        <width>146</width>
+        <height>27</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="edtVTr_6">
+      <property name="geometry">
+       <rect>
+        <x>431</x>
+        <y>240</y>
+        <width>146</width>
+        <height>27</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="cmbSyncMode_6">
+      <property name="geometry">
+       <rect>
+        <x>430</x>
+        <y>80</y>
+        <width>107</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>No Sync</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Local Sync</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Global Sync</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="lblQuality_6">
+      <property name="geometry">
+       <rect>
+        <x>301</x>
+        <y>140</y>
+        <width>78</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>MU Quality</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lblCTr_6">
+      <property name="geometry">
+       <rect>
+        <x>301</x>
+        <y>190</y>
+        <width>58</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>CT Ratio</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lblVTr_6">
+      <property name="geometry">
+       <rect>
+        <x>301</x>
+        <y>240</y>
+        <width>59</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>VT Ratio</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lblSvId_6">
+      <property name="geometry">
+       <rect>
+        <x>301</x>
+        <y>30</y>
+        <width>36</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>SV ID</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lblSyncMode_6">
+      <property name="geometry">
+       <rect>
+        <x>301</x>
+        <y>90</y>
+        <width>74</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Sync mode</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="chk_Simu_6">
+      <property name="geometry">
+       <rect>
+        <x>431</x>
+        <y>300</y>
+        <width>101</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Simulated</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lblSimu_6">
+      <property name="geometry">
+       <rect>
+        <x>301</x>
+        <y>300</y>
+        <width>94</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Simulation Bit</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tpMU_7">
+     <attribute name="title">
+      <string>MU7</string>
+     </attribute>
+     <widget class="QTableWidget" name="tbMU_7">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>256</width>
+        <height>441</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="edtSvId_7">
+      <property name="geometry">
+       <rect>
+        <x>430</x>
+        <y>20</y>
+        <width>260</width>
+        <height>27</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="chkqQues_7">
+      <property name="geometry">
+       <rect>
+        <x>580</x>
+        <y>140</y>
+        <width>131</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Questionable</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="chkqInvalid_7">
+      <property name="geometry">
+       <rect>
+        <x>430</x>
+        <y>140</y>
+        <width>75</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Invalid</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="chkqTest_7">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>140</y>
+        <width>97</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Test</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="edtCTr_7">
+      <property name="geometry">
+       <rect>
+        <x>430</x>
+        <y>190</y>
+        <width>146</width>
+        <height>27</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="edtVTr_7">
+      <property name="geometry">
+       <rect>
+        <x>430</x>
+        <y>240</y>
+        <width>146</width>
+        <height>27</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="cmbSyncMode_7">
+      <property name="geometry">
+       <rect>
+        <x>430</x>
+        <y>80</y>
+        <width>107</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>No Sync</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Local Sync</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Global Sync</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="lblCTr_7">
+      <property name="geometry">
+       <rect>
+        <x>301</x>
+        <y>190</y>
+        <width>58</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>CT Ratio</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lblQuality_7">
+      <property name="geometry">
+       <rect>
+        <x>301</x>
+        <y>140</y>
+        <width>78</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>MU Quality</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lblSvId_7">
+      <property name="geometry">
+       <rect>
+        <x>301</x>
+        <y>30</y>
+        <width>36</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>SV ID</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lblVTr_7">
+      <property name="geometry">
+       <rect>
+        <x>301</x>
+        <y>240</y>
+        <width>59</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>VT Ratio</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lblSyncMode_7">
+      <property name="geometry">
+       <rect>
+        <x>301</x>
+        <y>90</y>
+        <width>74</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Sync mode</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="chk_Simu_7">
+      <property name="geometry">
+       <rect>
+        <x>430</x>
+        <y>300</y>
+        <width>101</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Simulated</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lblSimu_7">
+      <property name="geometry">
+       <rect>
+        <x>301</x>
+        <y>300</y>
+        <width>94</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Simulation Bit</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tpMU_8">
+     <attribute name="title">
+      <string>MU8</string>
+     </attribute>
+     <widget class="QTableWidget" name="tbMU_8">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>256</width>
+        <height>441</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="edtSvId_8">
+      <property name="geometry">
+       <rect>
+        <x>430</x>
+        <y>20</y>
+        <width>260</width>
+        <height>27</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="chkqInvalid_8">
+      <property name="geometry">
+       <rect>
+        <x>430</x>
+        <y>140</y>
+        <width>75</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Invalid</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="chkqTest_8">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>140</y>
+        <width>97</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Test</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="chkqQues_8">
+      <property name="geometry">
+       <rect>
+        <x>580</x>
+        <y>140</y>
+        <width>131</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Questionable</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="edtCTr_8">
+      <property name="geometry">
+       <rect>
+        <x>430</x>
+        <y>190</y>
+        <width>146</width>
+        <height>27</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="edtVTr_8">
+      <property name="geometry">
+       <rect>
+        <x>430</x>
+        <y>240</y>
+        <width>146</width>
+        <height>27</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="cmbSyncMode_8">
+      <property name="geometry">
+       <rect>
+        <x>430</x>
+        <y>80</y>
+        <width>107</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>No Sync</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Local Sync</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Global Sync</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="lblVTr_8">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>240</y>
+        <width>59</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>VT Ratio</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lblSvId_8">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>30</y>
+        <width>36</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>SV ID</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lblCTr_8">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>190</y>
+        <width>58</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>CT Ratio</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lblQuality_8">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>140</y>
+        <width>78</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>MU Quality</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lblSyncMode_8">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>90</y>
+        <width>74</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Sync mode</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lblSimu_8">
+      <property name="geometry">
+       <rect>
+        <x>301</x>
+        <y>300</y>
+        <width>94</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Simulation Bit</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="chk_Simu_8">
+      <property name="geometry">
+       <rect>
+        <x>430</x>
+        <y>300</y>
+        <width>101</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Simulated</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="btnStart">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>560</x>
+      <y>520</y>
+      <width>99</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Start</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnApply">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>710</x>
+      <y>520</y>
+      <width>85</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Apply</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnExit">
+    <property name="geometry">
+     <rect>
+      <x>850</x>
+      <y>520</y>
+      <width>99</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Exit</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1024</width>
+     <height>19</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_File">
+    <property name="title">
+     <string>FILE</string>
+    </property>
+    <addaction name="actionOpen"/>
+    <addaction name="actionSave"/>
+    <addaction name="actionSave_as"/>
+    <addaction name="separator"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <addaction name="menu_File"/>
+  </widget>
+  <action name="actionOpen">
+   <property name="text">
+    <string>Open</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </action>
+  <action name="actionSave_as">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Save as...</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
