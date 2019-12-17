@@ -74,7 +74,7 @@ void delay_ms(unsigned long msec)
 	do
 	{
 		now = clock();
-	} while(now - start < msec);
+    } while((unsigned long)(now - start) < msec);
 }
 
 /*------------------------------------------------------------------------------
@@ -193,7 +193,7 @@ char ascii_to_float (const char *astr, float *float_num)
 
 uint32 bin_str_to_oct(const int8 *p_str)
 {
-    int i, num = 0;
+    unsigned int i, num = 0;
 
     assert(strlen(p_str) >= 1);
 
@@ -213,7 +213,7 @@ uint32 bin_str_to_oct(const int8 *p_str)
 void read_mu_config(MU_CONF *p_mu_conf, const char* conf_file)
 {
     FILE *fp;
-    int16 item_index = 0, idx;
+    uint16 item_index = 0, idx;
     char mu_conf_line[128];
     char *p_token, *p_token2;
     char str_path[MAX_PATH+1];

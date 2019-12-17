@@ -165,7 +165,7 @@ int clock_gettime(struct timespec *spec)
 */
 void update_sync_state(MU_CONF *p_mu_conf, int8 *sync)
 {
-    int32 i, k;
+    uint32 i, k;
 
     for(i=0; i<p_mu_conf->mu_no; i++)
     {
@@ -189,7 +189,7 @@ void update_sync_state(MU_CONF *p_mu_conf, int8 *sync)
 */
 void update_current_phsA(MU_CONF *p_mu_conf, float32 val)
 {
-    int32 i;
+    uint32 i;
 
     for(i=0; i<p_mu_conf->mu_no; i++)
     {
@@ -208,7 +208,7 @@ void update_current_phsA(MU_CONF *p_mu_conf, float32 val)
 */
 void update_voltage_phsA(MU_CONF *p_mu_conf, float32 val)
 {
-    int32 i;
+    uint32 i;
 
     for(i=0; i<p_mu_conf->mu_no; i++)
     {
@@ -226,7 +226,7 @@ void update_voltage_phsA(MU_CONF *p_mu_conf, float32 val)
 */
 void init_frames_92(MU_CONF *p_mu_conf)
 {
-    int32 i, j, k;
+    uint32 i, j, k;
     uint16 *p_data;
     uint32 length;
 
@@ -408,6 +408,7 @@ uint8 check_copylength(unsigned char* hlen,unsigned char* addr)
  * */
 uint16 check_length_special(uint32 length)
 {
+    (void)length;
     return 3;
 }
 
@@ -435,7 +436,7 @@ void copy_frames_sv(MU_CONF *p_mu_conf)
 {
     uint16 loc_index;
     uint8 i;
-    int32 k;
+    uint32 k;
 
     for(i=0; i<p_mu_conf->mu_no; i++)
     {
@@ -496,7 +497,7 @@ void copy_frames_sv(MU_CONF *p_mu_conf)
 */
 void init_table_samples(MU_CONF *p_mu_conf)
 {
-    int i, j, k;
+    uint i, j, k;
 
     for(i=0; i<p_mu_conf->mu_no; i++)
     {
@@ -524,7 +525,7 @@ void init_table_samples(MU_CONF *p_mu_conf)
 */
 void init_annalog(MU_CONF *p_mu_conf)
 {
-    int i;
+    uint32 i;
 
     for(i=0; i<p_mu_conf->mu_no; i++)
     {
@@ -586,7 +587,7 @@ void init_annalog(MU_CONF *p_mu_conf)
 */
 void update_frames(MU_CONF *p_mu_conf)
 {
-    int i, j, k;
+    uint32 i, j, k;
     uint16 *p_smp_cnt;
     struct DATASET *p_dataset;
     int32 *p_data;

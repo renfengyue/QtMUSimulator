@@ -241,7 +241,7 @@ int8 open_port_pcap(uint8 PortNum)
 */
 void send_frame_pcap(MU_CONF *p_mu_conf)
 {
-    int i = 0;
+    unsigned int i = 0;
 
     for(i=0; i<p_mu_conf->mu_no; i++)
     {
@@ -257,7 +257,7 @@ void send_frame_pcap(MU_CONF *p_mu_conf)
 
 void send_frame_pcap_with_lost_frame(MU_CONF *p_mu_conf, uint8 bFrameIsLost)
 {
-    int i = 0;
+    unsigned int i = 0;
 
     for(i = 0; i < p_mu_conf->mu_no; i++)
     {

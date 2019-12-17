@@ -48,7 +48,7 @@ void MainWindow::PrepareEthList()
 {
     DetectEthIF(&EthInterfaces);
     ui->cmbNetwork->clear();
-    for(int i = 0; i < EthInterfaces.number; i++)
+    for(unsigned int i = 0; i < EthInterfaces.number; i++)
     {
         ui->cmbNetwork->addItem(EthInterfaces.name[i]);
     }
