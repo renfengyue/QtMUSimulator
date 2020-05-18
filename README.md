@@ -2,7 +2,7 @@ QtMUSimulator: A simulator to simulate Merging Unit.
 We use GitHub as the primary official QtMUSimulator repository:
 https://github.com/renfengyue/QtMUSimulator/
 
-Copyright (c) 2019 Fengyue REN, Shanghai, China.
+Copyright (c) 2019 Shanghai, China.
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License version 2
