@@ -8,7 +8,8 @@ This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License version 2
 as published by the Free Software Foundation.
 
-QtMUSimulator is a MU Simulator used to publish Sample Value to link layer, it works in Linux (Ubuntu 16.04 32bit). 
+QtMUSimulator is a MU Simulator used to publish Sample Value, some basic tests are done
+only in Ubuntu 16.04 32bit. 
 The HMI of QtMUSimulator is design based on QT Creator 2.7.2.
 If you want to build the project, you should install QT Creator 2.7.2 or higher version.
 In additional, pcap is a dependent library when executing building.
@@ -66,5 +67,5 @@ PROCESS MAY BE SERVED ON EITHER PARTY IN THE MANNER AUTHORIZED BY APPLICABLE LAW
 ADVERTISEMENT
 -------------
 
-QtMUSimulator is developed by several people in SE.
+QtMUSimulator is developed by several people in SE and latest maintained by Fengyue REN.
 
